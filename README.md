@@ -4,9 +4,9 @@ Respositório dedicado ao armazenamento de praticas que caracterizam programaç�
 Dentre elas estão:
 
 1 - Encapsulamento
-2 - Herança
-3 - Polimorfismo
-4 - Abstração
+ 2 - Herança
+ 3 - Polimorfismo
+ 4 - Abstração
 
 ## ENCPASULAMENTO
    // Padrão de código através de contratos (Certo padrão será seguido ao criar uma classe), 
