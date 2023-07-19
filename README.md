@@ -14,7 +14,7 @@ Dentre elas estão:
     criadas funções para acessar os atributos, atribuindo ou recuperando valor do objeto //
 
 ## HERANÇA 
-   //  Criação de classes com informações padrão de uma classe mãe ou classe pai (Herança de informações) //
+   //  Criação de classes com informações padrão de uma classe mãe (Herança de informações) //
 
 ## POLIMORFISMO
    //  Quando um unico objeto pode se comportar de formas diferentes para uma determinada ação, 
