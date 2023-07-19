@@ -150,6 +150,4 @@ public class PainelTesla implements ComandosTesla {
        }
     }
 
-
-  
 }
