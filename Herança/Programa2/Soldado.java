@@ -11,7 +11,7 @@ public class Soldado extends RegistroPoliciais {
     }
     
     
-    public void infopoliciais(){
+    public void infosoldado(){
         super.infopoliciais();
         System.out.println("Arma utilizada: " + this.arma);
     }

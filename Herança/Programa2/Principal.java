@@ -9,6 +9,18 @@ public class Principal {
         System.out.println();
 
         Soldado sol = new Soldado("Carlos nogueira", "Soldado", 3556, "Ponto 40");
-        sol.infopoliciais();
+        sol.infosoldado();
+
+        System.out.println();
+
+        Cabo cab = new Cabo("Vinicius do carmo", "Cabo", 4778, "Retornar aos postos");
+        cab.infocabo();
+
+        System.out.println();
+
+        Sargento sa = new Sargento("Igor silva", "Sargento", 6778, "Ordenar aos solados que retornem aos postos");
+        sa.infosargento();
+
+
     }
 }
