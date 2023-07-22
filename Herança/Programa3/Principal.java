@@ -7,7 +7,7 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
        
 
-        System.out.println("Selecione o tipo de conta: 1 - Conta Corrente // 2 - Poupança");
+        System.out.println("Selecione o tipo de conta: 1 - Conta Corrente // 2 - Poupança // 3 - Especial");
         int escolha = scanner.nextInt();
 
         switch (escolha) {
@@ -70,7 +70,7 @@ public class Principal {
                 break;
 
             case 3:
-                String id = "jae";
+                String id = "#4556";
                 double saldo3 = 200000;
 
                 System.out.println("CONTA ESPECIAL SELECIONADA");
