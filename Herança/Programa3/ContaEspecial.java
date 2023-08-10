@@ -11,18 +11,14 @@ public class ContaEspecial extends ContaBancaria {
     }
    
 
-
     public double sacar2(double saque, double saldo,String id, String verificacao){
            if(verificacao.equals(id)){
                return saldo - saque;
            }else{
               return 0.0;
            }
-       
       
          }
-    
-    
     
     
     }
