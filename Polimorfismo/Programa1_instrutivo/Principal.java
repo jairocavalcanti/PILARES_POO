@@ -12,6 +12,8 @@ public class Principal {
     Polimorfismo utilizando sobrecarga:
     Metodos de mesmo nome com retornos diferentes
     */
+      System.out.println();
+
       Filme filme = new Filme("Maze runner");
       filme.play("Russo");
       filme.play("Russo", "Portugues");
