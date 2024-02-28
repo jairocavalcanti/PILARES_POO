@@ -6,10 +6,13 @@ public class Principal {
     public static void main(String[] args) {
       Scanner scanner = new Scanner(System.in);
       ContaBancaria cb = new ContaBancaria();
+      Pessoa_juridica pj = new Pessoa_juridica();
+      boolean init_0 = false;
 
+      while(init_0 != true){
       System.out.println("Insira a opção de conta que deseja criar: PF/PJ");
       String opcao = scanner.next();
-
+      
       if(opcao.toLowerCase().equals("pf")){
 
         cb.setTipo_de_conta("PF");
@@ -22,7 +25,11 @@ public class Principal {
 
         while (init.equals("m")) {
           
-          System.out.println("Insira a operação que deseja realizar: ");
+          System.out.println("Insira a operação que deseja realizar: " + 
+          " 1 - Depósito //" + 
+          " 2 - Saque //" +
+          " 3 - Verificar saldo //" +
+          " 4 - Informações gerais ");
           int escolha = scanner.nextInt();
 
           switch (escolha) {
@@ -47,6 +54,13 @@ public class Principal {
             System.out.println(cb.toString());
             break;
 
+            case 5:
+            System.out.println("--");
+            System.out.println("Sistema Encerrado !");
+            System.out.println("--");
+            init = "f";
+            break;
+
             default:
             System.out.println("!! Insira uma oção válida !!");
             break;
@@ -54,8 +68,17 @@ public class Principal {
 
         }
 
+      }else{
+       
+       pj.setTipo_de_conta("PJ");
+
+       System.out.println(pj.numero_de_conta(scanner));
+       System.out.println("--");
+       System.out.println(pj.inserir_nome(scanner));
+
       }
-     
+    
+    }
       
       scanner.close();
   }

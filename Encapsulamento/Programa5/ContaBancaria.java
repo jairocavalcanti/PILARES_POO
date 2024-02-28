@@ -10,8 +10,7 @@ public class ContaBancaria {
     private String nome = "";
     private String tipo_de_conta;
    
-
-    public ContaBancaria(){
+    public ContaBancaria() {
 
     }
 
@@ -58,11 +57,11 @@ public class ContaBancaria {
 
     public Integer numero_de_conta(Scanner scanner){
         
-        while(numero_da_conta < 3){
+        while(numero_da_conta < 100){
         System.out.printf("Insira o numero da conta: ");
         int novo_numero_conta = scanner.nextInt();
 
-        if(novo_numero_conta > 3){
+        if(novo_numero_conta >= 100){
            setNumero_da_conta(novo_numero_conta);
            System.out.printf("Numero de conta inserido - #");
            break;
@@ -97,7 +96,7 @@ public class ContaBancaria {
         System.out.printf("Insira o nome do titular da conta: ");
         String nome = scanner.next();
       
-        if(nome.length() > 5){
+        if(nome.length() >= 5){
            System.out.println("Nome de titular inserido com sucesso ! \n");
            setNome(nome);
            break;
@@ -127,14 +126,19 @@ public class ContaBancaria {
      @Override
      public String toString() {
         StringBuilder sb = new StringBuilder();
+        DecimalFormat df = new DecimalFormat("R$ ##.###");
+
+        sb.append("------------------------------------- \n");
 
         sb.append("-- INFORMAÇÕES GERAIS -- \n");
 
         sb.append("Nome: ").append(nome).append("\n");
         sb.append("Numero da conta: ").append(numero_da_conta).append("\n");
         sb.append("Tipo de conta: ").append(tipo_de_conta).append("\n");
-        sb.append("Saldo: ").append(saldo);
+        sb.append("Saldo: ").append(df.format(saldo));
        
+        sb.append(" \n------------------------------------- \n");
+        
         return sb.toString();
     }
 
