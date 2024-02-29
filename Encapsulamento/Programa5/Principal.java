@@ -21,15 +21,16 @@ public class Principal {
         System.out.println("--");
         System.out.println(cb.inserir_nome(scanner));
        
-        String init = "m";
+        String init = "a";
 
-        while (init.equals("m")) {
+        while (init.equals("a")) {
           
           System.out.println("Insira a operação que deseja realizar: " + 
           " 1 - Depósito //" + 
           " 2 - Saque //" +
           " 3 - Verificar saldo //" +
-          " 4 - Informações gerais ");
+          " 4 - Informações gerais //" +
+          " 5 - Encerrar");
           int escolha = scanner.nextInt();
 
           switch (escolha) {
@@ -62,7 +63,7 @@ public class Principal {
             break;
 
             default:
-            System.out.println("!! Insira uma oção válida !!");
+            System.out.println("!! Insira uma opção para PF válida !!");
             break;
           }
 
@@ -72,15 +73,66 @@ public class Principal {
        
        pj.setTipo_de_conta("PJ");
 
+       System.out.println(pj.inserir_nome_da_empresa(scanner));
+       System.out.println("--");
+       System.out.println(pj.inserir_CNPJ(scanner));
+       System.out.println("--");
        System.out.println(pj.numero_de_conta(scanner));
        System.out.println("--");
        System.out.println(pj.inserir_nome(scanner));
 
+       String init_2 = "b";
+
+       while (init_2.equals("b")) {
+
+        System.out.println("Insira a operação que deseja realizar: " + 
+        " 1 - Depósito //" + 
+        " 2 - Saque //" +
+        " 3 - Verificar saldo //" +
+        " 4 - Informações gerais //" +
+        " 5 - Encerrar");
+        int escolha = scanner.nextInt();
+
+        switch (escolha) {
+         
+          case 1:
+          System.out.println("Insira a quantidade que deseja depositar: ");
+          Double deposito = scanner.nextDouble();
+          pj.depositar_valor(deposito);
+          break;
+
+          case 2:
+          System.out.println("Insira a quantidade que deseja sacar: ");
+          Double saque = scanner.nextDouble();
+          pj.sacar_valor(saque);
+          break;
+
+          case 3: 
+          System.out.println(pj.verificar_saldo());
+          break;
+
+          case 4:
+          System.out.println(pj.toString());
+          break;
+
+          case 5:
+          System.out.println("--");
+          System.out.println("Sistema Encerrado !");
+          System.out.println("--");
+          init_2 = "f";
+          break;
+
+          default:
+          System.out.println("!! Insira uma opção para PJ válida !!");
+          break;
+        }
+        
       }
-    
-    }
       
-      scanner.close();
+    }
+    
+  }
+    scanner.close();
   }
 
 }

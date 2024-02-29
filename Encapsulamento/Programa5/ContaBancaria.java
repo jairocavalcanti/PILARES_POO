@@ -10,6 +10,7 @@ public class ContaBancaria {
     private String nome = "";
     private String tipo_de_conta;
    
+    
     public ContaBancaria() {
 
     }
@@ -122,7 +123,6 @@ public class ContaBancaria {
         System.out.println("Depósito na quantia de R$: " + valor + " realizado !");
     }
 
-
      @Override
      public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -141,6 +141,5 @@ public class ContaBancaria {
         
         return sb.toString();
     }
-
 
 }
